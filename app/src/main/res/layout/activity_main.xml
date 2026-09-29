@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- feito por -->
+        <TextView
+            android:id="@+id/txtIntegrantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="FEITO POR:"
+            android:textColor="#1A1A1A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/areaIntegrantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtAluno1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Sandro Luan Moreira dos Santos\nRGM: 42307937"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- logo -->
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/quiz_logo" />
+
+        <!-- campo nome -->
+        <EditText
+            android:id="@+id/editTextText12"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:ems="10"
+            android:hint="DIGITE SEU NOME"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="#1A1A1A"
+            android:textColorHint="#757575" />
+
+        <!-- botoes -->
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- start -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIniciar"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:enabled="false"
+                android:text="INICIAR QUIZ"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#010101"
+                app:cornerRadius="12dp" />
+
+            <!-- sair -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSair"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="SAIR"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:backgroundTint="#FF6750A4"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
