@@ -1,6 +1,6 @@
 package com.example.quiz;
 
-import android.content.Intent;
+import android.content.Intent; //import para enviar dados de tela em tela
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         btnIniciar = findViewById(R.id.btnIniciar);
         btnSair = findViewById(R.id.btnSair);
 
-        // só inicia apos o user colocar o nome
-        btnIniciar.setEnabled(false);
+
+        btnIniciar.setEnabled(false); // só inicia apos o user colocar o nome
 
         editNome.addTextChangedListener(new TextWatcher() {
             @Override

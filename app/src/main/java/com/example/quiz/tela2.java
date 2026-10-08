@@ -25,16 +25,15 @@ public class tela2 extends AppCompatActivity {
 
         btnResponder.setEnabled(false);
 
-        RadioButton[] alternativas = {radioButton3, radioButton4, radioButton5, radioButton6};
-        for (RadioButton alternativa : alternativas) {
+        RadioButton[] alternativas = {radioButton3, radioButton4, radioButton5, radioButton6}; //lista(array) de alternativa
+        for (RadioButton alternativa : alternativas) { //adiciona evento de clique para cada alternativa
             alternativa.setOnClickListener(v -> {
-                // Mantém apenas uma alternativa marcada por vez.
                 for (RadioButton item : alternativas) {
-                    if (item != v) {
+                    if (item != v) { //aqui ele desmarca usando a variavel 'v' que é a alternativa clicada
                         item.setChecked(false);
                     }
                 }
-                btnResponder.setEnabled(true);
+                btnResponder.setEnabled(true); //dentro do primeiro for ele habilita o botao de continuar
             });
         }
 
@@ -49,8 +48,7 @@ public class tela2 extends AppCompatActivity {
             it.putExtra("pontos", novaPontuacao);
             startActivity(it);
 
-            // Remove a pergunta atual da pilha para não permitir voltar à pergunta anterior.
-            finish();
+            finish();//finaliza a tela atual removendo da pilha de telas
         });
     }
 }

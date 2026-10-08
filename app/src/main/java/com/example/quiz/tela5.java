@@ -28,7 +28,6 @@ public class tela5 extends AppCompatActivity {
         RadioButton[] alternativas = {radioButton21, radioButton22, radioButton23, radioButton24};
         for (RadioButton alternativa : alternativas) {
             alternativa.setOnClickListener(v -> {
-                // Mantém apenas uma alternativa marcada por vez.
                 for (RadioButton item : alternativas) {
                     if (item != v) {
                         item.setChecked(false);
@@ -49,7 +48,6 @@ public class tela5 extends AppCompatActivity {
             it.putExtra("pontos", novaPontuacao);
             startActivity(it);
 
-            // Remove a pergunta atual da pilha para não permitir voltar à pergunta anterior.
             finish();
         });
     }
